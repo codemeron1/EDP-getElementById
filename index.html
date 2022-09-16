@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <script>
+      function ange() {
+        document.getElementById("charName").innerHTML = "ANGE";
+        document.getElementById("charDescription").innerHTML = "Si ange ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        document.getElementById("charSkill").innerHTML = "Si ange ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        document.getElementById("charOrigin").innerHTML = "Si ange ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        document.getElementById("charImage").src = "characters/ange.png";
+
+        document.getElementById("divOriginAbilities").style.display = "block";
+      }
+      function buyo() {
+        let charName = document.getElementById("charName");
+        let charDesc = document.getElementById("charDescription");
+        let charSkill = document.getElementById("charSkill");
+        let charOrigin = document.getElementById("charOrigin");
+        let charImage = document.getElementById("charImage");
+        let divInfo = document.getElementById("divOriginAbilities");
+
+        charName.innerHTML = "BUYO";
+        charDesc.innerHTML = "Si buyo ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        charSkill.innerHTML = "Si buyo ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        charOrigin.innerHTML = "Si buyo ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+
+        charImage.setAttribute("src", "characters/buyo.png");
+
+        divInfo.style.display = "block";
+      }
+      function tagpi() {
+        document.getElementById("charName").innerHTML = "TAGPI";
+        document.getElementById("charDescription").innerHTML = "Si tagpi ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        document.getElementById("charSkill").innerHTML = "Si tagpi ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+        document.getElementById("charOrigin").innerHTML = "Si tagpi ay ipsum dolor sit amet consectetur adipisicing elit. Nemo deserunt, laborum ad unde deleniti illo officiis officia, amet labore non odit id commodi possimus quasi perspiciatis molestias facilis, reiciendis assumenda.";
+
+        document.getElementById("charImage").src = "characters/tagpi.png";
+
+        document.getElementById("divOriginAbilities").style.display = "block";
+      }
+      function closeModal() {
+        let modal = document.getElementById("divOriginAbilities");
+        modal.style.display = "none";
+      }
+    </script>
+</head>
+<body>
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <div class="card m-2" style="width: 18rem;">
+        <img src="characters/ange.png" class="card-img-top" alt="Ange's Picture" style="height: 180px; width: 150px; display: block; margin: auto;">
+        <div class="card-body">
+          <h5 class="card-title">ANGE</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button href="#" class="btn btn-success" onclick="ange()">View Origin &amp; Abilities</button>
+        </div>
+      </div>
+
+      <div class="card m-2" style="width: 18rem;">
+        <img src="characters/buyo.png" class="card-img-top" alt="Ange's Picture" style="height: 180px; width: 150px; display: block; margin: auto;">
+        <div class="card-body">
+          <h5 class="card-title">BUYO</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button href="#" class="btn btn-success" onclick="buyo()">View Origin &amp; Abilities</button>
+        </div>
+      </div>
+
+      <div class="card m-2" style="width: 18rem;">
+        <img src="characters/tagpi.png" class="card-img-top" alt="Ange's Picture" style="height: 180px; width: 150px; display: block; margin: auto;">
+        <div class="card-body">
+          <h5 class="card-title">TAGPI</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <button href="#" class="btn btn-success" onclick="tagpi()">View Origin &amp; Abilities</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Origin and Abilities -->
+  <div class="card" style="width: 1000px; margin: auto; display: none;" id="divOriginAbilities">
+    <div class="row">
+      <div class="col-md-3">
+        <img src="" id="charImage" class="card-img-top" alt="Ange's Picture" style="height: 220px; width: 190px; display: block; margin: auto;">
+        <button class="btn-danger" onclick="closeModal()">Close</button>
+      </div>
+      <div class="col-md-9 p-3">
+        <h3 id="charName">ANGE</h3>
+        <p id="charDescription"></p>
+
+        <h2>SKILLS</h2>
+        <p id="charSkill"></p>
+
+        <h2>ORIGIN</h2>
+        <p id="charOrigin"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
